@@ -3,6 +3,8 @@ package com.springapp.angularspring.controller;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springapp.angularspring.model.Course;
@@ -23,4 +25,8 @@ public class CourseController {
     return courseRepository.findAll();
   }
 
+  @PostMapping
+  public Course create(@RequestBody Course course) {
+    return courseRepository.save(course);
+  }
 }
