@@ -4,6 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 
 import com.springapp.angularspring.model.Course;
 import com.springapp.angularspring.repository.CourseRepository;
@@ -16,6 +17,7 @@ public class AngularspringApplication {
 	}
 
 	@Bean
+	@Profile("!test")
 	CommandLineRunner initDatabase(CourseRepository courseRepository) {
 		return args -> {
 			courseRepository.deleteAll();
