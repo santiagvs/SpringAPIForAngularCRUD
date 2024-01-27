@@ -19,9 +19,9 @@ public class AngularspringApplication {
 	CommandLineRunner initDatabase(CourseRepository courseRepository) {
 		return args -> {
 			courseRepository.deleteAll();
-			courseRepository.save(Course.builder().name("Java").category("Programming").build());
-			courseRepository.save(Course.builder().name("Spring").category("Framework").build());
-			courseRepository.save(Course.builder().name("Angular").category("Framework").build());
+			courseRepository.save(Course.builder().name("Java").category("Back-End").build());
+			courseRepository.save(Course.builder().name("Spring").category("Back-End").build());
+			courseRepository.save(Course.builder().name("Angular").category("Front-End").build());
 		};
 	}
 
