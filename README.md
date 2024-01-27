@@ -1,6 +1,6 @@
 # API em Spring para CRUD de Cursos
 
-Esta documentação descreve a API em Spring que é consumida por um aplicativo front-end em Angular para realizar operações de leitura, criação, atualização e exclusão de cursos.
+Back-end do CRUD Angular, feito em Spring que serve para realizar operações de criação, salvamento, atualização e exclusão de cursos, aulas, etc.
 
 ## Executando o Projeto com Maven
 
